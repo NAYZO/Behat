@@ -1,0 +1,28 @@
+1- create Behat folder.
+2- install composer.phar
+3- creat composer.json
+4- $ php composer.phar install
+5- create behat.yml
+6- $ bin/behat --init
+
+7- download and install selenium server: http://www.seleniumhq.org/download/
+   to be able to use the "@javascript" instead of default "goutte"
+
+
+8- $ java -jar ~/Téléchargements/selenium-server-*   
+   For chrome : 
+       $ java -jar ~/Téléchargements/selenium-server-* -Dwebdriver.chrome.driver="/usr/bin/google-chrome"
+
+
+9- create senario:
+  in "features" folder create the file that will hold the senario of the test:
+  the file must have a ".feature" format.
+  and you can name it what ever you want.
+
+
+------ for Behat 2.5:
+
+10- update features/bootstrap/FeatureContext.php file:
+   - Add :           use Behat\MinkExtension\Context\MinkContext;
+   - change extend:  BehatContext --> MinkContext
+
